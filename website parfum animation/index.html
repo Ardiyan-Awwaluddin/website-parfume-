@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>High Quality Perfume Landing Page Design with animation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        outline: none;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Barlow Condensed", sans-serif;
+        overflow: hidden;
+        background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+
+        padding: 0 85px;
+        z-index: 999;
+      }
+
+      .header-inner {
+        padding: 30px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgb(229, 218, 218);
+      }
+      nav ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 0 35px;
+      }
+      nav ul li:last-child {
+        padding-right: 0;
+      }
+      nav ul li a {
+        position: relative;
+        font-weight: 500;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 20px;
+        transition: all ease 0.5s;
+      }
+      nav ul li a:before {
+        content: "";
+        position: absolute;
+        top: -22px;
+        right: 50%;
+        background: url(images/circular-text.svg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 75px;
+        height: 75px;
+        opacity: 0;
+        z-index: -1;
+        transition: all ease 0.5s;
+      }
+      nav ul li a:hover:before {
+        opacity: 1;
+        transform: rotate(360deg);
+        transition: ease 1.5s;
+      }
+      nav ul li a:hover {
+        color: #000;
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        padding: 130px 0 0 85px;
+        color: #fff;
+        background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+        height: 90vh;
+        border-radius: 0 0 100px 100px;
+        /* overflow: hidden; */
+        background-size: 50% 50%;
+        -webkit-animation: ignielGradient 12s ease infinite;
+        -moz-animation: ignielGradient 12s ease infinite;
+        animation: ignielGradient 12s ease infinite;
+      }
+      @-webkit-keyframes ignielGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @-moz-keyframes ignielGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @keyframes ignielGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .content h1 {
+        font-size: 42px;
+        line-height: 52px;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin-top: -42px;
+      }
+      .content p {
+        font-size: 15px;
+        line-height: 30px;
+        max-width: 500px;
+        font-family: "Popping", sans-serif;
+      }
+      .content .text {
+        max-width: 600px;
+      }
+      .content .img {
+        position: relative;
+        z-index: 9;
+      }
+      .content .banner-img {
+        margin-right: -35px;
+        margin-top: -45px;
+      }
+      .content .circular-text {
+        position: absolute;
+        top: 0;
+        right: 95px;
+        z-index: -1;
+        animation: circularText 12s linear infinite;
+      }
+      @keyframes circularText {
+        to {
+          transform: rotate(-360deg);
+        }
+      }
+
+      .products {
+        max-width: 63%;
+        display: flex;
+        justify-content: space-between;
+        margin: -100px 0 100px 85px;
+      }
+      .products .card {
+        width: 275px;
+        border-radius: 16px;
+        box-shadow: 0 10px 50px rgba(33, 180, 224, 0.806);
+        background-color: rgba(255, 255, 255, 0.333);
+        text-align: center;
+        margin-left: 15px;
+        margin-top: -30px;
+      }
+      .products .img {
+        margin-top: -160px;
+        position: relative;
+        margin-bottom: 35px;
+        transition: all ease 0.5s;
+      }
+      .products .img:before {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 107px;
+        height: 14px;
+        background-color: rgba(97, 92, 92, 0.778);
+        border-radius: 100%;
+        filter: blur(13px);
+      }
+      .products .img:hover {
+        transform: translateY(15px);
+      }
+      .products h6 {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #414344;
+        margin-bottom: 5px;
+      }
+
+      .products a {
+        display: inline-block;
+        min-width: 100px;
+        height: 30px;
+        line-height: 25px;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: rgb(91, 85, 85);
+        background-color: #f6fdfd5e;
+        border-radius: 50px;
+        border: 2px solid rgb(110, 199, 223);
+        box-shadow: 0 20px 40px rgba(75, 205, 237, 0.765);
+        transform: translateY(25px);
+        transition: all ease 0.5s;
+      }
+      .products a:hover {
+        background-color: rgba(45, 138, 225, 0.519);
+        border-color: #77c0e8;
+        color: #35251c;
+        box-shadow: none;
+        transform: translateY(20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header-inner">
+          <div class="logo">
+            <img src="images/logo.svg" alt="" />
+          </div>
+          <div class="menu">
+            <nav>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Faqs</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="text">
+          <h1>newbie</h1>
+          <p>
+            Parfum atau minyak wangi adalah campuran minyak esensial dan senyawa
+            aroma, fiksatif, dan pelarut yang digunakan untuk memberikan bau
+            wangi untuk tubuh manusia, objek, atau ruangan.
+          </p>
+        </div>
+        <div class="img">
+          <div class="banner-img">
+            <img src="images/banner.png" style="width: 400px" />
+          </div>
+          <div class="circular-text">
+            <img src="images/circular-text.svg" style="width: 300px" />
+          </div>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="card">
+          <div class="img">
+            <img src="images/parfume1.png" style="height: 200px" />
+          </div>
+          <div class="text">
+            <h6>Premium Quality Parfume</h6>
+          </div>
+          <a href="#">Get This</a>
+        </div>
+
+        <div class="card">
+          <div class="img">
+            <img
+              src="images/parfume2.png"
+              style="width: 230px; height: 200px"
+            />
+          </div>
+          <div class="text">
+            <h6>Premium Quality Parfume</h6>
+          </div>
+          <a href="#">Get This</a>
+        </div>
+
+        <div class="card">
+          <div class="img">
+            <img src="images/parfume1.png" style="width: 200px" />
+          </div>
+          <div class="text">
+            <h6>Premium Quality Parfume</h6>
+          </div>
+          <a href="#">Get This</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gsap link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+      gsap.from(".logo", {
+        duration: 1,
+        opacity: 0,
+        y: -100,
+      });
+      gsap.from("nav ul li", {
+        duration: 1,
+        opacity: 0,
+        y: -100,
+        stagger: 0.2,
+      });
+      gsap.from(".content .text > *", {
+        duration: 1,
+        opacity: 0,
+        y: 100,
+        stagger: 0.6,
+        delay: 1.6,
+      });
+      gsap.from(".products .card", {
+        duration: 1,
+        opacity: 0,
+        y: 100,
+        stagger: 0.6,
+        delay: 2,
+      });
+      gsap.from(".content .img", {
+        duration: 3,
+        opacity: 0,
+        x: 300,
+        stagger: 0.6,
+        delay: 3,
+      });
+    </script>
+  </body>
+</html>
